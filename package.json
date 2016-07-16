@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Konecty/DNE-Importer#readme",
   "dependencies": {
+    "highland": "^3.0.0-beta.2",
     "mongoose": "^4.5.4"
   }
 }
