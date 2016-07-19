@@ -19,6 +19,7 @@
   "dependencies": {
     "event-stream": "^3.3.3",
     "highland": "^3.0.0-beta.2",
+    "iconv-lite": "^0.4.13",
     "mongoose": "^4.5.4"
   }
 }
