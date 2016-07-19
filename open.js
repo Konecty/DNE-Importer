@@ -12,7 +12,6 @@ fs.readdir('./resources', function(err, files){
   var pattern_logradouro = new RegExp("(?!LOG_)LOGRADOURO")
   files.forEach(function(file){
     if(pattern_logradouro.test(file)){
-      //console.log(file);
       OpenLogradouro(file);
     }
   })
@@ -21,15 +20,15 @@ fs.readdir('./resources', function(err, files){
 function OpenLogradouro(file){
 
   console.log(file)
-  var s = fs.createReadStream('./resources/'+file, 'utf-8')
+  var s = fs.createReadStream('./resources/'+file)
     .pipe(es.split())
     .pipe(es.mapSync(function(line){
         console.log(line)
-        // pause the readstream
+        // pause o readstream
         s.pause();
         var attributes = line.split('@');
         var logradouro = new Logradouro();
-        console.log(attributes.length);
+        
         if(attributes.length == 11){
           logradouro.state = attributes[1];
           logradouro.city = attributes[2];
@@ -42,7 +41,7 @@ function OpenLogradouro(file){
           logradouro.status = attributes[9];
           logradouro.placeAbbr = attributes[10];
           logradouro.save(function(err, lgr){
-            // resume the readstream, possibly from a callback
+            // resume readstream
             s.resume();
           });
         }
