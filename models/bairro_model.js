@@ -5,7 +5,8 @@ var BairroSchema = mongoose.Schema({
   state: String,
   city: String,
   district: String,
-  districtAbbr: String
+  districtAbbr: String,
+  cityAbbr: String
 });
 
 module.exports = mongoose.model('Bairro', BairroSchema);

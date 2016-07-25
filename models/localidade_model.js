@@ -7,9 +7,9 @@ var LocalidadeSchema = mongoose.Schema({
   postalCode: String,
   status: String,
   type: String,
-  subordination: String,
+  // subordination: String,
   cityAbbr: String,
-  cityIbgeCode: String
+  // cityIbgeCode: String
 });
 
 module.exports = mongoose.model('Localidade', LocalidadeSchema);
