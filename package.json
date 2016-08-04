@@ -1,0 +1,25 @@
+{
+  "name": "readfiles",
+  "version": "1.0.0",
+  "description": "",
+  "main": "open.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Konecty/DNE-Importer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Konecty/DNE-Importer/issues"
+  },
+  "homepage": "https://github.com/Konecty/DNE-Importer#readme",
+  "dependencies": {
+    "event-stream": "^3.3.3",
+    "highland": "^3.0.0-beta.2",
+    "iconv-lite": "^0.4.13",
+    "mongoose": "^4.5.4"
+  }
+}
